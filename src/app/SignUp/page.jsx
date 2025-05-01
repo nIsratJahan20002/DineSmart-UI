@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '@/app/Component2/Footer/page';
+
 
 const page = () => {
   return (
@@ -10,7 +10,7 @@ const page = () => {
       </h2>
 
       {/* Sign Up Form */}
-      <div className="w-full max-w-md border-2 border-[#f3492a] rounded-xl p-8 shadow-lg text-center">
+      <div className="w-full max-w-md border-2 border-amber-600 rounded-xl p-8 shadow-lg text-center">
         <form className="space-y-5">
           <div className="text-left">
             <label htmlFor="email" className="block text-sm font-semibold mb-1">
@@ -21,7 +21,7 @@ const page = () => {
               id="email"
               name="email"
               defaultValue="zeeglyismail@gmail.com"
-              className="w-full px-4 py-2 border-2 border-[#f3492a] rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
+              className="w-full px-4 py-2 border-2 border-amber-600 rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
               required
             />
           </div>
@@ -35,7 +35,7 @@ const page = () => {
               id="name"
               name="name"
               defaultValue="MD. ISMAIL HOSSAIN"
-              className="w-full px-4 py-2 border-2 border-[#f3492a] rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
+              className="w-full px-4 py-2 border-2 border-amber-600 rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
               required
             />
           </div>
@@ -49,7 +49,7 @@ const page = () => {
               id="phone"
               name="phone"
               defaultValue="+8801580381235"
-              className="w-full px-4 py-2 border-2 border-[#f3492a] rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
+              className="w-full px-4 py-2 border-2 border-amber-600 rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
               required
             />
           </div>
@@ -66,14 +66,14 @@ const page = () => {
               id="password"
               name="password"
               defaultValue="pasword123"
-              className="w-full px-4 py-2 border-2 border-[#f3492a] rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
+              className="w-full px-4 py-2 border-2 border-amber-600 rounded-md focus:outline-none focus:ring-1 focus:ring-[#f3492a]"
               required
             />
           </div>
 
           <button
             type="submit"
-            className=" bg-white border-2 border-[#f3492a] text-black px-6 py-2 rounded-full shadow-md hover:bg-[#f3492a] hover:text-white transition-all"
+            className=" bg-white border-2 border-amber-600 text-black px-6 py-2 rounded-full shadow-md hover:bg-[#f3492a] hover:text-white transition-all"
           >
             Sign Up
           </button>
@@ -87,10 +87,7 @@ const page = () => {
         </p>
       </div>
 
-      {/* Footer */}
-      <div className="mt-16 w-full">
-        <Footer />
-      </div>
+      
     </div>
   );
 };

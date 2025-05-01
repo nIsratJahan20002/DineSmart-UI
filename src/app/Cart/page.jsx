@@ -1,7 +1,17 @@
 import React from 'react';
-import Footer from '@/app/Component2/Footer/page';
+
+
+
 
 const page = () => {
+<<<<<<< HEAD:src/app/Cart/page.jsx
+    return (
+        <div>
+            <h2>Cart Page</h2>
+            
+        </div>
+    );
+=======
   return (
     <div className="min-h-screen flex flex-col items-center bg-white px-4">
       {/* Heading OUTSIDE the box */}
@@ -65,6 +75,7 @@ const page = () => {
       </div>
     </div>
   );
+>>>>>>> 9ece85e5bed6ef5f03eca96ce436fcaa8dce548f:src/app/Component/LogIn/page.jsx
 };
 
 export default page;
