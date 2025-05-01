@@ -1,7 +1,7 @@
 import React from 'react';
-import OurService from '@/app/Component2/OurService/page';
-import ClientCard from '@/app/Component2/ClientCard/clientcard';
-import ClientCardGrid from '@/app/Component2/ClientCardGrid/clientcardgrid';
+import OurService from '@/app/Component/OurService/page';
+import ClientCard from '@/app/Component/ClientCard/clientcard';
+import ClientCardGrid from '@/app/Component/ClientCardGrid/clientcardgrid';
 import { FaStar } from "react-icons/fa";
 
 

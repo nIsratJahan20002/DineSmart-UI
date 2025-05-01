@@ -1,5 +1,5 @@
 import React from 'react';
-import ClientCard from '@/app/Component2/ClientCard/clientcard';
+import ClientCard from '@/app/Component/ClientCard/clientcard';
 
     const clients =[
         {

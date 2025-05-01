@@ -1,6 +1,6 @@
 import "./globals.css";
-import Menu from "./Component2/Menu/Menu";
-import Footer from './Component2/Footer/page';
+import Menu from "./Component/Menu/Menu";
+import Footer from './Component/Footer/page';
 
 
 
