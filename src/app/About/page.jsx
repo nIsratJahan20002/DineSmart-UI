@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '@/app/Component2/Footer/page';
 import OurService from '@/app/Component2/OurService/page';
 import ClientCard from '@/app/Component2/ClientCard/clientcard';
 import ClientCardGrid from '@/app/Component2/ClientCardGrid/clientcardgrid';
@@ -38,7 +37,7 @@ const page = () => {
 
         <button className='bg-amber-600 py-3 px-7 rounded-lg text-white font-semibold text-sm cursor-pointer hover:bg-white hover:text-amber-600 hover:border hover:border-amber-600/30 hover:shadow-xl mx-auto block mt-2 '>Continue</button>
       </div>
-      <Footer/>
+      
     </div>
   );
 };

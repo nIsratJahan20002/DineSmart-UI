@@ -16,10 +16,10 @@ const Navbar = () => {
 
                     <div className='hidden md:flex space-x-6'>
                         <Link href="/" className='text-white hover:text-black'>Home</Link>
-                        <Link href="/Component/About" className='text-white hover:text-black'>About</Link>
-                        <Link href="/Component/LogIn" className='text-white hover:text-black'>Log In</Link>
-                        <Link href="/Component/SignUp" className='text-white hover:text-black'>Sign Up</Link>
-                        <Link href="/Component/Cart" className='text-white hover:text-black'>Cart</Link>
+                        <Link href="/About" className='text-white hover:text-black'>About</Link>
+                        <Link href="/LogIn" className='text-white hover:text-black'>Log In</Link>
+                        <Link href="/SignUp" className='text-white hover:text-black'>Sign Up</Link>
+                        <Link href="/Cart" className='text-white hover:text-black'>Cart</Link>
                     </div>
 
                     <button className='md:hidden' onClick={()=>setIsOpen(!isOpen)}>

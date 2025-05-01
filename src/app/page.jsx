@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '@/app/Component2/Footer/page';
 import Image from 'next/image';
 
 const page = () => {
@@ -35,7 +34,7 @@ const page = () => {
             </div>
 
           </div>
-          <Footer/>
+          
 
           
 
