@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const metadata = {
-    title: 'Cart',
-    description: 'This is the cart page of the application',
-};
+export async function generateMetadata() {
+    return {
+        title: 'Cart',
+        description: 'This is the cart page of the application',
+    };
+}
 
 
 const Layout = ({ children }) => {

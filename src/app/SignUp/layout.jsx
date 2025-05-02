@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const metadata = {
-    title: 'Sign Up',
-    description: 'This is the sign up page of the application',
-};
+export function generateMetadata() {
+    return {
+        title: 'Sign Up',
+        description: 'This is the sign up page of the application',
+    };
+}
 
 
 const Layout = ({ children }) => {
