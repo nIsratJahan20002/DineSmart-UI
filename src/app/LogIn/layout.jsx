@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const metadata = {
-    title: 'Log In',
-    description: 'This is the login page of the application',
-};
+export async function generateMetadata() {
+    return {
+        title: 'Log In',
+        description: 'This is the login page of the application',
+    };
+}
 
 
 const Layout = ({ children }) => {
