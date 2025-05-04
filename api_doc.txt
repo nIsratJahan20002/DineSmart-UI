@@ -1,0 +1,187 @@
+===============================================
+🧾 API Documentation – Food Ordering System
+===============================================
+
+📅 Last Updated: 2025-05-04  
+🔐 Auth Required: ✅ = Yes | ❌ = No  
+🌐 Base URL: http://13.250.1.8:8000
+
+-----------------------------------------------
+1️⃣ Customer Registration
+-----------------------------------------------
+▶️ Method: POST  
+🔗 Endpoint: /api/auth/customer-registration/  
+🌐 Full URL: http://13.250.1.8:8000/api/auth/customer-registration/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Creates a new customer account and sends an OTP via email for activation.
+
+📤 Request Body:
+{
+  "email": "mshosen2001@gmail.com",
+  "name": "Md. Shahadot Hosen",
+  "phone_number": "01942387768",
+  "password": "12345@admin"
+}
+
+-----------------------------------------------
+2️⃣ Customer Account Activation
+-----------------------------------------------
+▶️ Method: POST  
+🔗 Endpoint: /api/auth/customer-activation/  
+🌐 Full URL: http://13.250.1.8:8000/api/auth/customer-activation/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Activates the customer account using the OTP received via email.
+
+📤 Request Body:
+{
+  "email": "mshosen2001@gmail.com",
+  "otp": 444019
+}
+
+-----------------------------------------------
+3️⃣ Customer OTP Resend
+-----------------------------------------------
+▶️ Method: POST  
+🔗 Endpoint: /api/auth/otp-resend/  
+🌐 Full URL: http://13.250.1.8:8000/api/auth/otp-resend/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Resends OTP if it expires before account activation.
+
+📤 Request Body:
+{
+  "email": "mshosen2001@gmail.com",
+  "password": "12345@admin"
+}
+
+-----------------------------------------------
+4️⃣ Customer Login
+-----------------------------------------------
+▶️ Method: POST  
+🔗 Endpoint: /api/auth/customer-login/  
+🌐 Full URL: http://13.250.1.8:8000/api/auth/customer-login/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Authenticates a customer and returns an access token. Account must be activated.
+
+📤 Request Body:
+{
+  "email": "mshosen2001@gmail.com",
+  "password": "12345@admin"
+}
+
+-----------------------------------------------
+5️⃣ Order Type List
+-----------------------------------------------
+▶️ Method: GET  
+🔗 Endpoint: /api/order/type-list/  
+🌐 Full URL: http://13.250.1.8:8000/api/order/type-list/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Returns a list of order types such as Dine In, Takeaway, Delivery, etc.
+
+📤 Request Body: None
+
+-----------------------------------------------
+6️⃣ Order Table List
+-----------------------------------------------
+▶️ Method: GET  
+🔗 Endpoint: /api/order/table-list/  
+🌐 Full URL: http://13.250.1.8:8000/api/order/table-list/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Returns available tables with details like table number, seats, and status.
+
+📤 Request Body: None
+
+-----------------------------------------------
+7️⃣ Order Delivery
+-----------------------------------------------
+
+▶️ Method: POST  
+🔗 Endpoint: /api/order/delivery/  
+🌐 Full URL: http://13.250.1.8:8000/api/order/delivery/  
+🔐 Auth Required: ❌
+
+📄 Description: Set a new delivery address.
+
+📤 Request Body:
+{
+  "name": "Md. Shahadot Hosen",
+  "phone_number": "01942387768",
+  "address_1": "NJ, Dhaka, Bangladesh"
+}
+
+▶️ Method: GET  
+🔗 Endpoint: /api/order/delivery/?phone_number=01942387768  
+🌐 Full URL: http://13.250.1.8:8000/api/order/delivery/?phone_number=01942387768  
+🔐 Auth Required: ❌
+
+📄 Description: Get existing delivery address using phone number.
+
+▶️ Method: PATCH  
+🔗 Endpoint: /api/order/delivery/  
+🌐 Full URL: http://13.250.1.8:8000/api/order/delivery/  
+🔐 Auth Required: ❌
+
+📄 Description: Update delivery address (address_2).
+
+📤 Request Body:
+{
+  "phone_number": "01942387768",
+  "address_2": "Banasre, Dhaka, Bangladesh"
+}
+
+-----------------------------------------------
+8️⃣ Menu Item List
+-----------------------------------------------
+▶️ Method: GET  
+🔗 Endpoint: /api/food/item-list/  
+🌐 Full URL: http://13.250.1.8:8000/api/food/item-list/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Returns a list of all menu items (e.g., Burger, Pizza, Salad).
+
+📤 Request Body: None
+
+-----------------------------------------------
+9️⃣ Menu Item Types by Category
+-----------------------------------------------
+▶️ Method: GET  
+🔗 Endpoint: /api/food/item-type-list/  
+🌐 Full URL: http://13.250.1.8:8000/api/food/item-type-list/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Returns categories within each menu item (e.g., Classic Burgers, Cheese Burgers).
+
+📤 Request Body: None
+
+-----------------------------------------------
+🔟 Item Ingredient List
+-----------------------------------------------
+▶️ Method: GET  
+🔗 Endpoint: /api/food/item-ingredient-list/  
+🌐 Full URL: http://13.250.1.8:8000/api/food/item-ingredient-list/  
+🔐 Auth Required: ❌
+
+📄 Description:
+Returns the list of ingredients used in menu items.
+
+📤 Request Body: None
+
+===============================================
+✍️ Notes:
+- All responses are in JSON format.
+- Use Bearer Token for authenticated routes (if added later).
+- For any issues, contact the backend team.
+===============================================
