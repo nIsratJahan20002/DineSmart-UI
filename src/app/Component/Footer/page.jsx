@@ -1,63 +1,97 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
+const Footer = () => {
+  return (
+    <footer className='bg-white text-black py-12 px-4'>
+      <div className='container mx-auto max-w-6xl'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12'>
+          {/* Brand Info */}
+          <div className='space-y-4'>
+            <h2 className='text-2xl font-bold text-amber-600'>DineSmart</h2>
+            <p className='text-gray-600 text-sm leading-relaxed'>
+              Revolutionizing dining experiences with smart technology and exceptional service. 
+              We connect food lovers with the best restaurants in town.
+            </p>
+            <div className='flex space-x-4 pt-2'>
+              <a href="#" className='text-gray-500 hover:text-blue-600 transition-colors'>
+                <FaFacebookF className="text-lg" />
+              </a>
+              <a href="#" className='text-gray-500 hover:text-blue-400 transition-colors'>
+                <FaTwitter className="text-lg" />
+              </a>
+              <a href="#" className='text-gray-500 hover:text-pink-600 transition-colors'>
+                <FaInstagram className="text-lg" />
+              </a>
+              <a href="#" className='text-gray-500 hover:text-blue-700 transition-colors'>
+                <FaLinkedinIn className="text-lg" />
+              </a>
+            </div>
+          </div>
 
-const page = () => {
+          {/* Quick Links */}
+          <div className='space-y-4'>
+            <h3 className='text-lg font-semibold text-gray-800'>Company</h3>
+            <ul className='space-y-3'>
+              {['About Us', 'Careers', 'Blog', 'Press'].map((item) => (
+                <li key={item}>
+                  <a href="#" className='text-gray-600 hover:text-amber-600 text-sm transition-colors flex items-start'>
+                    <span className='hover:underline'>{item}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
+          {/* Services */}
+          <div className='space-y-4'>
+            <h3 className='text-lg font-semibold text-gray-800'>Services</h3>
+            <ul className='space-y-3'>
+              {['Reservations', 'Catering', 'Private Dining', 'Gift Cards'].map((item) => (
+                <li key={item}>
+                  <a href="#" className='text-gray-600 hover:text-amber-600 text-sm transition-colors flex items-start'>
+                    <span className='hover:underline'>{item}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-
-    return (
-        <div>
-            <footer className='bg-white text-black py-10'>
-                <div className='container mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 place-items-center'>
-
-                    <div>
-                        <h2 className='text-xl text-amber-600 font-bold'>DineSmart</h2>
-                        <p className='mt-5 text-gray-900/80 text-sm text-justify'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A eius dolores quisquam magnam libero, aliquam officia dicta maxime nisi similique soluta molestias atque vitae, dolor mollitia laudantium animi debitis aperiam.</p>
-                        <div className='flex space-x-4 mt-4'>
-                            <FaFacebookF className="text-xl cursor-pointer hover:text-blue-500"/>
-                            <FaTwitter className="text-xl cursor-pointer hover:text-blue-400"/>
-                            <FaInstagram className="text-xl cursor-pointer hover:text-pink-500"/>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h2 className='text-md font-semibold mb-3'>Company</h2>
-                        <ul className='space-y-2 text-gray-600'>
-                            <li><a href="#" className='hover:text-gray-900 text-sm'>About Us</a></li>
-                            <li><a href="#" className='hover:text-gray-900 text-sm'>Email</a></li>
-                            <li><a href="#" className='hover:text-gray-900 text-sm'>Contact</a></li>
-                            <li><a href="#" className='hover:text-gray-900 text-sm'>Address</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                    <h2 className='text-md font-semibold mb-3'>Services</h2>
-                        <ul className='space-y-2 text-gray-600'>
-                            <li><a href="#" className='text-gray-600 hover:text-gray-900 text-sm'>Pakages</a></li>
-                            <li><a href="#" className='text-gray-600 hover:text-gray-900 text-sm'>Discount</a></li>
-                            <li><a href="#" className='text-gray-600 hover:text-gray-900 text-sm'>Team</a></li>
-                            <li><a href="#" className='text-gray-600 hover:text-gray-900 text-sm'>Features</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 className='text-md font-semibold mb-3'>Customer Support</h2>
-                        <h2 className='text-md font-semibold'>Privacy & Security</h2>
-                    </div>
-
-                </div>
-
-                <div className='text-center text-gray-500 mt-10 border-t border-gray-700/30 pt-5'>
-                   &copy; {new Date().getFullYear()} DineSmart. All rights reserved. 
-                </div>
-
-            </footer>
+          {/* Contact Info */}
+          <div className='space-y-4'>
+            <h3 className='text-lg font-semibold text-gray-800'>Contact Us</h3>
+            <ul className='space-y-3 text-gray-600 text-sm'>
+              <li className='flex items-start space-x-3'>
+                <FaPhoneAlt className='mt-0.5 text-amber-600 flex-shrink-0' />
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li className='flex items-start space-x-3'>
+                <FaEnvelope className='mt-0.5 text-amber-600 flex-shrink-0' />
+                <span>info@dinesmart.com</span>
+              </li>
+              <li className='flex items-start space-x-3'>
+                <FaMapMarkerAlt className='mt-0.5 text-amber-600 flex-shrink-0' />
+                <span>123 Restaurant Row, Foodville, FK 12345</span>
+              </li>
+            </ul>
+          </div>
         </div>
-    );
+
+        {/* Copyright */}
+        <div className='border-t border-gray-200 mt-12 pt-8 text-center text-gray-500 text-sm'>
+          <p>&copy; {new Date().getFullYear()} DineSmart. All rights reserved.</p>
+          <div className='flex justify-center space-x-4 mt-2'>
+            <a href="#" className='hover:text-amber-600 hover:underline'>Privacy Policy</a>
+            <a href="#" className='hover:text-amber-600 hover:underline'>Terms of Service</a>
+            <a href="#" className='hover:text-amber-600 hover:underline'>Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
-export default page;
+export default Footer;
 
 
 

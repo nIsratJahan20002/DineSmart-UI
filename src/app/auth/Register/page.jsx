@@ -22,7 +22,7 @@ export default function RegisterPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    const res = await fetch('http://13.250.1.8:8000/api/auth/customer-registration/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
