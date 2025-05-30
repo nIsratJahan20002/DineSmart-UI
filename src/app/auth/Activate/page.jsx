@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function ActivatePage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({ email: '', otp: '' });
   const [message, setMessage] = useState('');
 
@@ -13,21 +15,29 @@ export default function ActivatePage() {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    const res = await fetch(
-      'http://13.215.203.33:8000/api/auth/customer-activation/',
-      {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+    try {
+      const res = await fetch(
+        'http://13.215.203.33:8000/api/auth/customer-activation/',
+        {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMessage('✅ Activation successful. Redirecting to login...');
+        // Redirect after 1.5 seconds
+        setTimeout(() => {
+          router.push('/auth/Login');
+        }, 1500);
+      } else {
+        setMessage(data.message || '❌ Activation failed.');
       }
-    );
-
-    const data = await res.json();
-
-    if (res.ok) {
-      setMessage('✅ Activation successful. You can now log in.');
-    } else {
-      setMessage(data.message || '❌ Activation failed.');
+    } catch (err) {
+      setMessage('❌ Something went wrong.');
     }
   };
 
